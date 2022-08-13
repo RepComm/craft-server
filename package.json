@@ -1,11 +1,12 @@
 {
-  "name": "ts-map-babel-template",
+  "name": "craft-server",
   "version": "1.0.0",
-  "description": "TypeScript, ES Modules, import map, import map polyfill, and babel",
-  "main": "index.js",
+  "description": "A server for craft-server",
+  "main": "./index.js",
+  "type":"module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RepComm/ts-map-babel-template.git"
+    "url": "git+https://github.com/RepComm/craft-server.git"
   },
   "keywords": [
     "typescript",
@@ -16,22 +17,20 @@
   "author": "Jonathan Crowder",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/RepComm/ts-map-babel-template/issues"
+    "url": "https://github.com/RepComm/craft-server/issues"
   },
-  "homepage": "https://github.com/RepComm/ts-map-babel-template#readme",
+  "homepage": "https://github.com/RepComm/craft-server#readme",
   "devDependencies": {
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.14.0",
     "@babel/plugin-transform-typescript": "^7.10.5",
     "@babel/preset-env": "^7.14.1",
+    "@types/node": "^18.6.5",
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "build": "babel src --extensions .ts --copy-files -d . && npm run build-types",
+    "build": "babel src --extensions .ts --copy-files -d .",
     "build-types": "npx tsc --project tsconfig.json",
     "publish": "npm publish --access public"
-  },
-  "dependencies": {
-    "@repcomm/exponent-ts": "^1.1.9"
   }
 }
